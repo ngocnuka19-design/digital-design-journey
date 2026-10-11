@@ -1,0 +1,15 @@
+# Verilator build artifacts
+**/obj_dir/
+
+# Simulation waveforms
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+*.ghw
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
