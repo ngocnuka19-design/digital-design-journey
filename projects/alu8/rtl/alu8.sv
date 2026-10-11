@@ -11,10 +11,10 @@ module alu8 (
     generate
         for (i = 0; i < 8 ;i = i + 1) begin: gen_alu
             alu1 inst (
-                .a(a[i]), 
-                .b(b[i]), 
-                .op(op), 
-                .cin(carry[i]), 
+                .a(a[i]),
+                .b(b[i]),
+                .op(op),
+                .cin(carry[i]),
                 .carry(carry[i+1]),
                 .out(out[i])
             );
@@ -26,7 +26,7 @@ module alu1 (
     input a, b,
     input [2:0] op,
     input cin,
-    output carry, 
+    output carry,
     output reg out
 );
     wire fadd_sum, sub_diff;
@@ -39,7 +39,6 @@ module alu1 (
             default: out = 0;
         endcase
     end
-    
 endmodule
 /* module fadd (
     input a, b, cin,
